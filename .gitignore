@@ -1,7 +1,8 @@
 /node_modules/
 
-# Build folders
+# Builds
 build/
+public/
 
 # Environment-specific
 .idea
