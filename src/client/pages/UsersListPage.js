@@ -32,5 +32,7 @@ function loadData(store) {
   return store.dispatch(fetchUsers())
 }
 
-export { loadData };
-export default connect(mstp, { fetchUsers })(UsersList);
+export default {
+  loadData,
+  component: connect(mstp, { fetchUsers })(UsersList),
+};

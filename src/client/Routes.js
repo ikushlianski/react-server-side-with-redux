@@ -1,6 +1,6 @@
 import React from 'react';
-import Home from './components/Home';
-import UsersList, { loadData } from './components/UsersList';
+import HomePage from './pages/HomePage';
+import UsersListPage from './pages/UsersListPage';
 
 /*
 For SSR to work we have to use react-dom-config,
@@ -9,13 +9,12 @@ which requires an array of such objects instead of
 */
 export default [
   {
+    ...HomePage,
     path: '/',
-    component: Home,
     exact: true,
   },
   {
-    loadData,
+    ...UsersListPage,
     path: '/users',
-    component: UsersList,
   },
 ];
